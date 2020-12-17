@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <Import Project="..\SignAssemblies.targets" Condition="Exists('..\SignAssemblies.targets')" />
+  <Target Name="BuildSigning" AfterTargets="AfterBuild">
+    <MSBuild Projects="$(MsBuildThisFile)" Targets="SignAssemblies" Properties="AssembliesPath=$(TargetDir);AssembliesPattern=*.dll" />
+    <MSBuild Projects="$(MsBuildThisFile)" Targets="SignAssemblies" Properties="AssembliesPath=$(TargetDir);AssembliesPattern=*.exe" />
+  </Target>
+  <Target Name="PublishSigning" AfterTargets="AfterPublish">
+    <MSBuild Projects="$(MsBuildThisFile)" Targets="SignAssemblies" Properties="AssembliesPath=$(PublishUrl);AssembliesPattern=*.dll" />
+    <MSBuild Projects="$(MsBuildThisFile)" Targets="SignAssemblies" Properties="AssembliesPath=$(PublishUrl);AssembliesPattern=*.exe" />
+  </Target>
+
+</Project>

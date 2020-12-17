@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="SignAssemblies">
+    <Message Importance="high" Text="Signing assemblies..." />
+    <Message Importance="high" Text="Assemblies path: $(AssembliesPath)" />
+    <Message Importance="high" Text="Assemblies pattern: $(AssembliesPattern)" />
+    <Exec Command="$(SolutionDir)SignAssemblies.cmd $(SolutionDir) $(AssembliesPath)$(AssembliesPattern)" />
+    <Message Importance="high" Text="Assemblies signed..." />
+  </Target>
+</Project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DeployPackages Condition="'$(DeployPackages)' == ''">false</DeployPackages>
+    <NuGetPath>C:\Temp\</NuGetPath>
+    <NuGetUrl>https://dist.nuget.org/win-x86-commandline/latest/nuget.exe</NuGetUrl>
+    <NuGetSource>C:\Temp\Packages\</NuGetSource>
+    <ApiKey>45606a77-19e6-4de3-9302-e651a507c785</ApiKey>
+  </PropertyGroup>
+  <Target Name="DownloadNuget" Condition="!Exists('$(NuGetPath)nuget.exe')">
+    <Message Importance="high" Text="Downloading NuGet..." />
+    <DownloadFile SourceUrl="$(NuGeturl)" DestinationFolder="$(NuGetPath)" />
+    <Message Importance="high" Text="NuGet downloaded..." />
+  </Target>
+  <Target Name="DeployPackage" Condition="$(DeployPackage) OR $(DeployPackages)" DependsOnTargets="DownloadNuget">
+    <Message Importance="high" Text="Deploying package..." />
+    <Exec Command="&quot;$(NuGetPath)nuget.exe&quot; push &quot;$(ProjectDir)bin\$(Configuration)\$(PackageIdentifier).$(PackageVersion).nupkg&quot; -Source $(NuGetSource) -ApiKey $(ApiKey)" />
+    <Message Importance="high" Text="Package deployed..." />
+  </Target>
+</Project>

@@ -1,0 +1,108 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "RS.Blog.Projects.ConnectedServices.FullAPI"
+  },
+  "host": "localhost:5200",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/first/number": {
+      "get": {
+        "tags": [
+          "First"
+        ],
+        "operationId": "First_NumberMethod",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/first/string": {
+      "get": {
+        "tags": [
+          "First"
+        ],
+        "operationId": "First_StringMethod",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/second/number": {
+      "get": {
+        "tags": [
+          "Second"
+        ],
+        "operationId": "Second_NumberMethod",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/api/second/string": {
+      "get": {
+        "tags": [
+          "Second"
+        ],
+        "operationId": "Second_StringMethod",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}

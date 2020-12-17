@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Ricardo Sotolongo</Authors>
+    <Company>RS</Company>
+    <Product>RS.Blog.DemoPackage</Product>
+    <PackageId>RS.Blog.DemoPackage</PackageId>
+  </PropertyGroup>
+
+  <Import Project="..\DeployPackage.targets" Condition="Exists('..\DeployPackage.targets')" />
+  <Target Name="DeployingPackage" AfterTargets="GenerateNuspec">
+    <MSBuild Projects="$(MsBuildThisFile)" Targets="DeployPackage" Properties="PackageIdentifier=$(PackageId);PackageVersion=$(Version);DeployPackage=true" />
+  </Target>
+</Project>
