@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RS.Blog.Projects.DeployPackages.DemoPackage", "RS.Blog.Projects.DeployPackages.DemoPackage\RS.Blog.Projects.DeployPackages.DemoPackage.csproj", "{2496E6F6-FF49-41E6-B8D7-43A0F5359B2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BBD86114-1C4D-4EDB-ACAC-EDE9E6988380}"
+	ProjectSection(SolutionItems) = preProject
+		DeployPackage.targets = DeployPackage.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2496E6F6-FF49-41E6-B8D7-43A0F5359B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2496E6F6-FF49-41E6-B8D7-43A0F5359B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2496E6F6-FF49-41E6-B8D7-43A0F5359B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2496E6F6-FF49-41E6-B8D7-43A0F5359B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {484A6B99-7CC8-4D15-AD49-D388A22CAE9D}
+	EndGlobalSection
+EndGlobal
