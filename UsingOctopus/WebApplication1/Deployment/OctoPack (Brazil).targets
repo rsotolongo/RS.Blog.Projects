@@ -1,0 +1,8 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DeployBrazil>false</DeployBrazil>
+    <RunOctoPack Condition="$(DeployBrazil)">true</RunOctoPack>
+    <OctopusProject Condition="$(DeployBrazil)">Portals.WebApplication1 BRAZIL</OctopusProject>
+    <OctopusNotes Condition="$(DeployBrazil)">New release.</OctopusNotes>
+  </PropertyGroup>
+</Project>
