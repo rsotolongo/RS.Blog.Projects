@@ -42,8 +42,8 @@
     <OctoExePath Condition="'$(OctoExePath)' == ''">..\packages\OctopusTools.4.17.0\tools\Octo.exe</OctoExePath>
     <OctopusProject Condition="'$(OctopusProject)' == ''"></OctopusProject>
     <OctopusEnvironment Condition="'$(OctopusEnvironment)' == ''">Development</OctopusEnvironment>
-    <OctopusPortal Condition="'$(OctopusPortal)' == ''">http://octopus.rant.com/ACT_WebHosting</OctopusPortal>
-    <OctopusApiKey Condition="'$(OctopusApiKey)' == ''">API-L6NRPGPZB4V1EYDVUX23KDXUJU</OctopusApiKey>
+    <OctopusPortal Condition="'$(OctopusPortal)' == ''"></OctopusPortal>
+    <OctopusApiKey Condition="'$(OctopusApiKey)' == ''"></OctopusApiKey>
     <OctopusNotes Condition="'$(OctopusNotes)' == ''">New release sample notes.</OctopusNotes>
   </PropertyGroup>
 
